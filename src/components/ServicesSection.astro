@@ -1,0 +1,92 @@
+---
+import onlineTraining from "../assets/visuals/online-training.webp";
+import personalTraining from "../assets/visuals/personal-training.webp";
+---
+
+<section class="services-section">
+  <div class="online-training bg-secondClr">
+    <img src={onlineTraining} alt="Online Training" loading="lazy" />
+    <div class="content">
+      <h2 class="text-textDark text-2xl font-bold">
+        We can work together online
+      </h2>
+      <p class="text-textLight text-base mt-4">
+        Whether you are looking to lose fat, increase muscle mass or just want
+        to improve your health, I can help. We will go through your current
+        habits, routines and motivation to see where you can improve them as
+        this will be the foundations for your success. Then we dive into
+        nutrition and training which will all be set for you and discussed
+        together afterwards.
+      </p>
+    </div>
+  </div>
+  <div class="in-person-training bg-thirdClr">
+    <img src={personalTraining} alt="Personal Training" loading="lazy" />
+    <div class="content">
+      <h2 class="text-textDark text-2xl font-bold">
+        We can work together in person
+      </h2>
+      <p class="text-textLight text-base mt-4">
+        You will get to experience firsthand how it feels to push yourself like
+        never before and see the hard work pay off. During 1-1 training, you
+        will have a tailored plan guiding you towards your goals, you will also
+        have training programs for your sessions to continue away from 1-1. We
+        will sit down and go through your nutrition to set up better habits and
+        create a sustainable diet to create longer-lasting results.
+      </p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .online-training > img,
+  .in-person-training > img {
+    display: none;
+  }
+
+  .online-training,
+  .in-person-training {
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-top: 3rem;
+  }
+
+  @media screen and (min-width: 52rem) {
+    .services-section {
+      grid-column: 3 / -3;
+    }
+
+    .online-training,
+    .in-person-training {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 4rem;
+      padding: 2rem;
+    }
+    .online-training > img,
+    .in-person-training > img {
+      display: block;
+      max-width: 100%;
+      aspect-ratio: 1;
+      border-radius: 5px;
+      object-fit: cover;
+      object-position: center top;
+      max-width: 50%;
+    }
+    .content {
+      flex-grow: 1;
+    }
+
+    .online-training > img {
+      box-shadow: -8px -8px #ff6b00;
+    }
+    .in-person-training > img {
+      box-shadow: 8px -8px #ff6b00;
+    }
+
+    .in-person-training > img {
+      order: 2;
+    }
+  }
+</style>

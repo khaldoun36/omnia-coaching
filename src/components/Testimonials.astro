@@ -1,0 +1,129 @@
+---
+import { Icon } from "astro-icon";
+
+const testimonials = [
+  {
+    author: "Donna Rhodes",
+    testimonial:
+      "Sam changed my mindset with food and training, every session we did Sam put his all into it and I thoroughly enjoyed every single one, i was making real progress, I looked better, felt fitter and actually was happy in my own skin for the first time in a long while, he taught me so much, I lost 2 and a half stone in total, I've tried many PT's over the years but never made any real progress till met Sam, He literally changed my life and for that I will always be grateful.",
+  },
+  {
+    author: "Donna Rhodes",
+    testimonial:
+      "Sam changed my mindset with food and training, every session we did Sam put his all into it and I thoroughly enjoyed every single one, i was making real progress, I looked better, felt fitter and actually was happy in my own skin for the first time in a long while, he taught me so much, I lost 2 and a half stone in total, I've tried many PT's over the years but never made any real progress till met Sam, He literally changed my life and for that I will always be grateful.",
+  },
+  {
+    author: "Donna Rhodes",
+    testimonial:
+      "Sam changed my mindset with food and training, every session we did Sam put his all into it and I thoroughly enjoyed every single one, i was making real progress, I looked better, felt fitter and actually was happy in my own skin for the first time in a long while, he taught me so much, I lost 2 and a half stone in total, I've tried many PT's over the years but never made any real progress till met Sam, He literally changed my life and for that I will always be grateful.",
+  },
+  {
+    author: "Donna Rhodes",
+    testimonial:
+      "Sam changed my mindset with food and training, every session we did Sam put his all into it and I thoroughly enjoyed every single one, i was making real progress, I looked better, felt fitter and actually was happy in my own skin for the first time in a long while, he taught me so much, I lost 2 and a half stone in total, I've tried many PT's over the years but never made any real progress till met Sam, He literally changed my life and for that I will always be grateful.",
+  },
+  {
+    author: "Donna Rhodes",
+    testimonial:
+      "Sam changed my mindset with food and training, every session we did Sam put his all into it and I thoroughly enjoyed every single one, i was making real progress, I looked better, felt fitter and actually was happy in my own skin for the first time in a long while, he taught me so much, I lost 2 and a half stone in total, I've tried many PT's over the years but never made any real progress till met Sam, He literally changed my life and for that I will always be grateful.",
+  },
+  {
+    author: "Donna Rhodes",
+    testimonial:
+      "Sam changed my mindset with food and training, every session we did Sam put his all into it and I thoroughly enjoyed every single one, i was making real progress, I looked better, felt fitter and actually was happy in my own skin for the first time in a long while, he taught me so much, I lost 2 and a half stone in total, I've tried many PT's over the years but never made any real progress till met Sam, He literally changed my life and for that I will always be grateful.",
+  },
+  {
+    author: "Donna Rhodes",
+    testimonial:
+      "Sam changed my mindset with food and training, every session we did Sam put his all into it and I thoroughly enjoyed every single one, i was making real progress, I looked better, felt fitter and actually was happy in my own skin for the first time in a long while, he taught me so much, I lost 2 and a half stone in total, I've tried many PT's over the years but never made any real progress till met Sam, He literally changed my life and for that I will always be grateful.",
+  },
+  {
+    author: "Donna Rhodes",
+    testimonial:
+      "Sam changed my mindset with food and training, every session we did Sam put his all into it and I thoroughly enjoyed every single one, i was making real progress, I looked better, felt fitter and actually was happy in my own skin for the first time in a long while, he taught me so much, I lost 2 and a half stone in total, I've tried many PT's over the years but never made any real progress till met Sam, He literally changed my life and for that I will always be grateful.",
+  },
+];
+---
+
+<h2
+  class="section-title text-textDark text-3xl font-bold md:text-5xl text-center"
+>
+  What the people say
+</h2>
+
+<section class="media-scroller client-testimonials snaps-inline">
+  {
+    testimonials.map((testimonial) => (
+      <div class="media-element testimonial bg-neutralClr p-4">
+        <p class="text-base text-textLight">{testimonial.testimonial}</p>
+        <h3 class="text-xl text-textDark font-bold mt-4">
+          {testimonial.author}
+        </h3>
+        <Icon name="testimonial-vector" />
+      </div>
+    ))
+  }
+</section>
+
+<style>
+  .section-title {
+    margin-top: clamp(5rem, 6vw, 6rem);
+  }
+  .media-scroller.client-testimonials {
+    margin-top: clamp(1.5rem, 3vw, 2rem);
+    display: grid;
+    gap: 2rem;
+    grid-auto-flow: column;
+    grid-template-rows: 1fr;
+    grid-auto-columns: 80%;
+
+    overflow-x: auto;
+    overscroll-behavior: contain;
+
+    padding-bottom: 0.75rem;
+  }
+
+  .media-element {
+    border-radius: 10px;
+    inline-size: 100%;
+    aspect-ratio: 1;
+  }
+
+  .snaps-inline {
+    scroll-snap-type: inline mandatory;
+    scroll-padding-inline: 1rem;
+  }
+
+  .snaps-inline > * {
+    scroll-snap-align: start;
+  }
+
+  .media-element.testimonial {
+    position: relative;
+  }
+
+  [astro-icon="testimonial-vector"] {
+    width: 5rem;
+    aspect-ratio: 1;
+    position: absolute;
+    right: 5%;
+    bottom: 5%;
+  }
+
+  @media screen and (min-width: 32rem) and (max-width: 51.99rem) {
+    .media-scroller.client-testimonials {
+      grid-auto-columns: 55%;
+    }
+  }
+
+  @media screen and (min-width: 52rem) {
+    .media-scroller.client-testimonials {
+      grid-column: 1 / -1;
+      grid-auto-columns: 28%;
+    }
+
+    .section-title {
+      grid-column: 1 / -1;
+    }
+  }
+</style>

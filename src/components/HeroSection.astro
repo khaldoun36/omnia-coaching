@@ -1,0 +1,59 @@
+---
+import heroImage from "../assets/visuals/hero-image.webp";
+---
+
+<main class="hero-section">
+  <div class="hero-content">
+    <h1
+      class="text-textDark text-5xl font-bold leading-[3.25rem] md:text-6xl md:leading-[4rem]"
+    >
+      I can help you shape your <span class="text-primaryClr">ideal body</span>
+    </h1>
+    <p class="text-textLight text-base md:text-lg">
+      I've been helping people change their lives and improve their health for
+      over a decade, and I'd love to help you too. My primary goal is to help
+      you reach your goals, so I tailor each program to meet your needs.
+    </p>
+    <a href="/" class="btn btn-primary">Help me change my life</a>
+  </div>
+  <img src={heroImage} class="hero-image" alt="hero image" loading="lazy" />
+</main>
+
+<style>
+  .hero-content > p {
+    margin-top: 1.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .hero-image {
+    margin-top: 3rem;
+    max-width: 100%;
+    aspect-ratio: 16/10;
+    border-radius: 10px;
+    object-fit: cover;
+    object-position: center top;
+    box-shadow: 8px -8px #ff6b00;
+  }
+
+  @media screen and (min-width: 52rem) {
+    .hero-section {
+      grid-column: 2 / -2;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+    }
+
+    .hero-section > * {
+      max-width: 50%;
+    }
+
+    .hero-content {
+      max-width: 60ch;
+    }
+
+    .hero-image {
+      aspect-ratio: 1;
+    }
+  }
+</style>
