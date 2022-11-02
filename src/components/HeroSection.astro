@@ -16,7 +16,12 @@ import heroImage from "../assets/visuals/hero-image.webp";
     </p>
     <a href="/" class="btn btn-primary">Help me change my life</a>
   </div>
-  <img src={heroImage} class="hero-image" alt="hero image" loading="lazy" />
+  <img
+    src={heroImage}
+    class="hero-image aspect-[16/10] md:aspect-square"
+    alt="hero image"
+    loading="lazy"
+  />
 </main>
 
 <style>
@@ -28,7 +33,6 @@ import heroImage from "../assets/visuals/hero-image.webp";
   .hero-image {
     margin-top: 3rem;
     max-width: 100%;
-    aspect-ratio: 16 / 10;
     border-radius: 10px;
     object-fit: cover;
     object-position: center top;
@@ -50,10 +54,6 @@ import heroImage from "../assets/visuals/hero-image.webp";
 
     .hero-content {
       max-width: 60ch;
-    }
-
-    .hero-image {
-      aspect-ratio: 1;
     }
   }
 </style>
