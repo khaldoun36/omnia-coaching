@@ -1,13 +1,13 @@
 ---
 const clientResults = [
-  { image: "src/assets/visuals/client-image-1.jpeg" },
-  { image: "src/assets/visuals/client-image-2.jpeg" },
-  { image: "src/assets/visuals/client-image-3.jpeg" },
-  { image: "src/assets/visuals/client-image-4.jpeg" },
-  { image: "src/assets/visuals/client-image-4.jpeg" },
-  { image: "src/assets/visuals/client-image-4.jpeg" },
-  { image: "src/assets/visuals/client-image-4.jpeg" },
-  { image: "src/assets/visuals/client-image-4.jpeg" },
+  { image: "../assets/visuals/client-image-1.jpeg" },
+  { image: "../assets/visuals/client-image-2.jpeg" },
+  { image: "../assets/visuals/client-image-3.jpeg" },
+  { image: "../assets/visuals/client-image-4.jpeg" },
+  { image: "../assets/visuals/client-image-4.jpeg" },
+  { image: "../assets/visuals/client-image-4.jpeg" },
+  { image: "../assets/visuals/client-image-4.jpeg" },
+  { image: "../assets/visuals/client-image-4.jpeg" },
 ];
 ---
 
@@ -15,7 +15,7 @@ const clientResults = [
   {
     clientResults.map((client) => (
       <img
-        src={client.image}
+        src="https://images.unsplash.com/photo-1659350774685-04b709a54863?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
         alt="Client Image before and after weight loss"
         class="media-element"
       />
@@ -47,7 +47,8 @@ const clientResults = [
   .media-element {
     border-radius: 10px;
     inline-size: 100%;
-    /* object-fit: cover; */
+    aspect-ratio: 1;
+    object-fit: cover;
   }
 
   .snaps-inline {
